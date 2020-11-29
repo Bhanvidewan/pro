@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pro</title>
+	<style>
+        div{
+        position : absolute;
+        right : 10px;
+        top : 5px
+        }
+    </style>
+</head>
+<body><form action="/postadmin/" method="post">
+	{% block content %}
+	
+	WELCOME ADMIN {{e}}
+	{% csrf_token %}
+	</br></br>
+	Project_ID:   
+	<input type="text" name="pid">
+	</br>
+</br>
+	Name:
+	<input type="text" name="name">
+	</br>
+</br>
+	Description:
+	<input type="text" name="desc">
+	</br>
+</br>
+	MemberID1:
+	<input type="text" name="num">
+	</br>
+</br>
+	Member_ID2:
+	<input type="text" name="mem">
+	</br>
+</br>
+	<input type="submit" value="Create">
+	</br>
+</br>
+	</form>
+	
+	
+	<div>
+	<button type="button" onclick="location.href='{% url 'log' %}'">Logout</button>
+	</div>
+	{% endblock %}
+</body>
+</html>

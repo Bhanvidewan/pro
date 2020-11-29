@@ -1,0 +1,29 @@
+
+{% if messg %}
+<script>
+	alert('{{messg}}');
+</script>
+{% endif %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOGIN</title>
+</head>
+<body>
+<form action="/postsign/" method="post">
+	{% block content %}
+	{% csrf_token %}
+	</br>
+	Login ID :   
+	<input type="email" name="email">
+	</br></br>
+	
+	Password:
+	<input type="password" name="pass">
+	</br></br>
+	
+	<input type="submit" value="Submit">
+	{% endblock %}
+</form>
+</body>
+</html>
