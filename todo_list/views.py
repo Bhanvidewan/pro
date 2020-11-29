@@ -90,9 +90,8 @@ def createpro(request):
             receiver_email =d["EmailID"]   # Enter receiver address
             password = "0"
             message = """\
-            Subject: Project
-
-            You got a new project."""
+Subject: Project
+You got a new project."""
 
             context = ssl.create_default_context()
             with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
